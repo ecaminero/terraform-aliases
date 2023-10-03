@@ -34,15 +34,15 @@ def main():
         ('i', 'init', None, None),
         ('p', 'plan', None, None),
         ('a', 'apply', None, None),
-        ('w', 'workspace', None, None),
+        ('ws', 'workspace', None, None),
     ]
 
     res = [
-        ('l', 'list', ['w'], None),
-        ('s', 'select', ['w'], None),
-        ('d', 'delete', ['w'], None),
-        ('n', 'new', ['w'], None),
-        ('s', 'show', ['w'], None),
+        ('ls', 'list', ['ws'], None),
+        ('se', 'select', ['ws'], None),
+        ('rm', 'delete', ['ws'], None),
+        ('ne', 'new', ['ws'], None),
+        ('sh', 'show', ['ws'], None),
     ]
     res_types = [r[0] for r in res]
 
