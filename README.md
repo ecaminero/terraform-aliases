@@ -21,20 +21,20 @@ alias tfi='terraform init'
 alias tfp='terraform plan'
 alias tfa='terraform apply'
 
-alias tfw='terraform workspace'
-alias tfwl='terraform workspace list'
-alias tfws='terraform workspace select'
-alias tfwn='terraform workspace new'
-alias tfws='terraform workspace show'
+alias tfws='terraform workspace'
+alias tfwsl='terraform workspace list'
+alias tfwsse='terraform workspace select'
+alias tfwsn='terraform workspace new'
+alias tfwssh='terraform workspace show'
 ...
 ```
 
-See [the full list](..terraform_aliases).
+See [the full list](.terraform_aliases).
 
 ### Installation
 
-You can directly download the [`..terraform_aliases` file](https://raw.githubusercontent.com/ecaminero/terraform-aliases/main/.terraform_aliases)
-for bash/zsh or the [`..terraform_aliases.fish` file](https://raw.githubusercontent.com/ecaminero/terraform-aliases/main/.terraform_aliases.fish)
+You can directly download the [`.terraform_aliases` file](https://raw.githubusercontent.com/ecaminero/terraform-aliases/main/.terraform_aliases)
+for bash/zsh or the [`.terraform_aliases.fish` file](https://raw.githubusercontent.com/ecaminero/terraform-aliases/main/.terraform_aliases.fish)
 for fish and save it to your `$HOME` directory.
 
 #### Bash/Zsh
@@ -42,7 +42,7 @@ for fish and save it to your `$HOME` directory.
 Add the following to your `.bashrc/.zshrc` file:
 
 ```sh
-[ -f ~/..terraform_aliases ] && source ~/..terraform_aliases
+[ -f ~/.terraform_aliases ] && source ~/.terraform_aliases
 ```
 
 #### Fish
@@ -50,7 +50,7 @@ Add the following to your `.bashrc/.zshrc` file:
 Add the following to your `~/.config/fish/config.fish` file:
 
 ```fish
-test -f ~/..terraform_aliases.fish && source ~/..terraform_aliases.fish
+test -f ~/.terraform_aliases.fish && source ~/.terraform_aliases.fish
 ```
 
 This actually adds the more powerful fish [abbreviations](https://fishshell.com/docs/current/cmds/abbr.html)
@@ -63,8 +63,8 @@ instead of aliases, so that pressing space shows the full command before executi
   * **`i`**=`init`
   * **`p`**=`plan`
   * **`a`**=`apply`
-  * **`w`**:`workspace`
-  * **`wl`**:`workspace list`
+  * **`ws`**:`workspace`
+  * **`wsls`**:`workspace list`
 
 ### Running the script
 
@@ -72,10 +72,10 @@ The script has only one optional argument, the shell to which the aliases will b
 
 ```bash
 # Generate aliases for bash/zsh
-python generate_aliases.py > ..terraform_aliases
+python generate_aliases.py > .terraform_aliases
 
 # Generate abbr for fish
-python generate_aliases.py fish > ..terraform_aliases.fish
+python generate_aliases.py fish > .terraform_aliases.fish
 ```
 
 ### FAQ
