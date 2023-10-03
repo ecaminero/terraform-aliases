@@ -41,7 +41,7 @@ def main():
         ('ls', 'list', ['ws'], None),
         ('se', 'select', ['ws'], None),
         ('rm', 'delete', ['ws'], None),
-        ('ne', 'new', ['ws'], None),
+        ('nw', 'new', ['ws'], None),
         ('sh', 'show', ['ws'], None),
     ]
     res_types = [r[0] for r in res]
