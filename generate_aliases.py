@@ -31,10 +31,11 @@ def main():
     cmds = [('tf', 'terraform', None, None)]
 
     ops = [
-        ('i', 'init', None, None),
-        ('p', 'plan', None, None),
-        ('a', 'apply', None, None),
-        ('ws', 'workspace', None, None),
+        ('i', 'init', None, ['p', 'a', 'ws', 'o']),
+        ('p', 'plan', None, ['i', 'a', 'ws', 'o']),
+        ('a', 'apply', None, ['p', 'i', 'ws', 'o']),
+        ('ws', 'workspace', None, ['p', 'a', 'i', 'o']),
+        ('o', 'output', None, ['p', 'a', 'i', 'ws']),
     ]
 
     res = [
