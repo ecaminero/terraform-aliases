@@ -31,18 +31,27 @@ def main():
     cmds = [('tf', 'terraform', None, None)]
 
     ops = [
-        ('i', 'init', None, None),
-        ('p', 'plan', None, None),
-        ('a', 'apply', None, None),
-        ('ws', 'workspace', None, None),
+        ('i', 'init', None, ['p', 'a', 'ws', 'o', 'st', 'imp']),
+        ('p', 'plan', None, ['i', 'a', 'ws', 'o', 'st', 'imp']),
+        ('a', 'apply', None, ['p', 'i', 'ws', 'o', 'st', 'imp']),
+        ('ws', 'workspace', None, ['p', 'a', 'i', 'o', 'st', 'imp']),
+        ('o', 'output', None, ['p', 'a', 'i', 'ws', 'st', 'imp']),
+        ('imp', 'import', None, ['p', 'a', 'i', 'ws', 'o', 'st']),
+        ('st', 'state', None, ['p', 'a', 'i', 'ws', 'o', 'imp']),
+
     ]
 
     res = [
-        ('ls', 'list', ['ws'], None),
+        ('ls', 'list', ['ws', 'st'], None),
         ('se', 'select', ['ws'], None),
-        ('rm', 'delete', ['ws'], None),
-        ('ne', 'new', ['ws'], None),
-        ('sh', 'show', ['ws'], None),
+        ('del', 'delete', ['ws', 'st'], None),
+        ('rm', 'rm', ['st'], None),
+        ('nw', 'new', ['ws'], None),
+        ('sh', 'show', ['ws', 'st'], None),
+        ('mv', 'mv', ['st'], None),
+        ('rp', 'replace-provider', ['st'], None),
+        ('push', 'push', ['st'], None),
+        ('pull', 'pull', ['st'], None),
     ]
     res_types = [r[0] for r in res]
 
@@ -51,6 +60,7 @@ def main():
         ('ref', '-refresh-only', ['p'], ['des']),
         ('aa', '-auto-approve', ['a'], None),
         ('lf', '-lock=false', ['p', 'a'], None),
+        ('up', '--upgrade', ['i'], None),
     ]
     
     # these accept a value, so they need to be at the end and

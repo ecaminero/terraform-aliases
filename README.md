@@ -22,9 +22,9 @@ alias tfp='terraform plan'
 alias tfa='terraform apply'
 
 alias tfws='terraform workspace'
-alias tfwsl='terraform workspace list'
+alias tfwsls='terraform workspace list'
 alias tfwsse='terraform workspace select'
-alias tfwsn='terraform workspace new'
+alias tfwsnw='terraform workspace new'
 alias tfwssh='terraform workspace show'
 ...
 ```
