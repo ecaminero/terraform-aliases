@@ -36,22 +36,33 @@ def main():
         ('a', 'apply', None, ['p', 'i', 'ws', 'o', 'st', 'imp']),
         ('ws', 'workspace', None, ['p', 'a', 'i', 'o', 'st', 'imp']),
         ('o', 'output', None, ['p', 'a', 'i', 'ws', 'st', 'imp']),
-        ('imp', 'import', None, ['p', 'a', 'i', 'ws', 'o', 'st']),
+        ('im', 'import', None, ['p', 'a', 'i', 'ws', 'o', 'st']),
         ('st', 'state', None, ['p', 'a', 'i', 'ws', 'o', 'imp']),
+        ('pr', 'providers', None, None),
+        ('r', 'refresh', None, None),
+        ('sh', 'show', None, None),
+        ('t', 'taint', None, None),
+        ('ut', 'untaint', None, None),
+        ('v', 'validate', None, None),
+        ('s', 'state', None, None),
+        ('fu', 'force-unlock', None, None),
 
     ]
 
     res = [
-        ('ls', 'list', ['ws', 'st'], None),
+        ('ls', 'list', ['ws', 's'], None),
         ('se', 'select', ['ws'], None),
-        ('del', 'delete', ['ws', 'st'], None),
+        ('sw', 'show', ['ws', 's'], None),
+        ('de', 'delete', ['ws'], None),
         ('rm', 'rm', ['st'], None),
         ('nw', 'new', ['ws'], None),
         ('sh', 'show', ['ws', 'st'], None),
         ('mv', 'mv', ['st'], None),
         ('rp', 'replace-provider', ['st'], None),
-        ('push', 'push', ['st'], None),
-        ('pull', 'pull', ['st'], None),
+        ('ph', 'push', ['s'], None),
+        ('pl', 'pull', ['s'], None),
+        ('nw', 'new', ['ws'], None),
+        ('rm', 'rm', ['s'], None),
     ]
     res_types = [r[0] for r in res]
 
